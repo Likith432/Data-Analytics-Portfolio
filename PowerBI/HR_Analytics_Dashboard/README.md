@@ -1,136 +1,123 @@
-# 📊 Superstore Sales Dashboard
+# 👥 HR Analytics Dashboard
 
 ## 📌 Project Overview
 
-This Power BI dashboard analyzes Superstore sales performance across regions, categories, segments, and shipping modes.
+This Power BI dashboard analyzes employee attrition patterns and workforce demographics to help HR teams identify turnover drivers and improve employee retention strategies.
 
-The dashboard provides insights into revenue trends, profitability patterns, customer segments, and geographic performance to support strategic business decisions.
+The dashboard provides insights into attrition trends by age, salary, job role, education, and years at company.
 
 ---
 
 ## 🎯 Business Objective
 
-The objective of this dashboard is to:
+The purpose of this dashboard is to:
 
-* Monitor overall sales and profit performance
-* Identify top-performing categories and sub-categories
-* Analyze regional and segment-level contribution
-* Track monthly sales and profit trends
-* Optimize shipping mode and operational efficiency
+* Monitor overall employee attrition
+* Identify high-risk employee groups
+* Analyze job satisfaction impact on turnover
+* Understand salary and tenure-based attrition patterns
+* Support data-driven HR decision making
 
 ---
 
 ## 🗂 Dataset Information
 
-Dataset Used: `SuperStore_Sales_Dataset.csv`
+Dataset Used: `HR_Analytics.csv`
 
-The dataset includes:
+The dataset contains:
 
-* Order Details (Order ID, Date)
-* Region (Central, East, South, West)
-* Category & Sub-Category
-* Sales & Profit
-* Ship Mode
-* Customer Segment
-* Payment Mode
-* State-level geographic data
+* Employee demographics (Age, Gender, Education)
+* Job details (Job Role, Department, Salary Slab)
+* Years at Company
+* Attrition status
+* Job Satisfaction levels
 
----
-
-## 📈 Key KPIs Implemented
-
-| KPI               | Value |
-| ----------------- | ----- |
-| Total Orders      | 22K   |
-| Total Sales       | 2M    |
-| Total Profit      | 175K  |
-| Avg Shipping Days | 4     |
-
-These KPIs provide a quick overview of business performance.
+This is a **single structured employee dataset**, suitable for direct aggregation modeling.
 
 ---
 
-## 📊 Dashboard Features & Insights
+## 📈 Key KPIs
 
-### 🔹 Sales by Category
+| KPI                      | Value |
+| ------------------------ | ----- |
+| Employee Count           | 1.47K |
+| Attrition Count          | 237   |
+| Attrition Rate           | 16.1% |
+| Average Age              | 37    |
+| Average Salary           | 6.5K  |
+| Average Years at Company | 7     |
 
-* Office Supplies: 0.64M (Highest)
-* Technology: 0.47M
-* Furniture: 0.45M
+These KPIs provide a snapshot of workforce health.
 
-📌 Office Supplies drives maximum revenue.
+---
 
+## 📊 Dashboard Analysis & Insights
 
-### 🔹 Sales by Sub-Category
+### 🔹 Attrition by Gender
 
-* Phones (Top contributor)
-* Chairs
-* Binders
-
-📌 Technology-related items are high-performing.
-
-
-### 🔹 Sales by Segment
-
-* Consumer: 48%
-* Corporate: 33%
-* Home Office: 19%
-
-📌 Consumer segment contributes nearly half of total revenue.
+* Male attrition higher than female.
+* Indicates possible job-role or department concentration among male employees.
 
 
-### 🔹 Sales by Region
+### 🔹 Attrition by Age Group
 
-* West: 33% (Highest)
-* East: 29%
-* Central: 22%
-* South: 16%
+* Highest attrition in 26–35 age group.
+* Young professionals show higher turnover.
 
-📌 West region is the strongest revenue contributor.
+📌 Suggests early-career retention strategies needed.
 
 
-### 🔹 Sales by Payment Mode
+### 🔹 Attrition by Education
 
-* COD: 43%
-* Online: 35%
-* Cards: 22%
+* Life Sciences (38%) highest attrition
+* Medical (27%)
+* Marketing & Technical follow
 
-📌 Majority customers prefer Cash on Delivery.
-
-
-### 🔹 Shipping Mode Analysis
-
-* Standard Class dominates shipping volume.
-* Same Day shipping contributes minimal sales.
-
-📌 Opportunity to optimize premium shipping strategy.
+📌 Skill-based role pressure may influence turnover.
 
 
-### 🔹 Monthly Sales & Profit Trends
+### 🔹 Attrition by Salary Slab
 
-* Consistent upward trend toward year-end.
-* Peak sales observed in November–December.
-* Profit fluctuates across months.
+* Majority attrition in salary ≤ 5K
+* Significant drop as salary increases
 
-📌 Strong Q4 performance suggests seasonal demand impact.
+📌 Compensation strongly influences retention.
 
 
-### 🔹 Geographic Analysis
+### 🔹 Attrition by Years at Company
 
-State-level map visualization highlights:
+* Peak attrition at early tenure (1–3 years)
+* Declines with longer tenure
 
-* High revenue concentration in major states.
-* Potential for targeted regional campaigns.
+📌 Critical retention window: First 2–3 years.
+
+
+### 🔹 Attrition by Job Role
+
+Highest attrition observed in:
+
+* Laboratory Technician
+* Sales Executive
+* Research Scientist
+
+📌 Operational & sales roles face higher turnover pressure.
+
+
+### 🔹 Job Satisfaction Analysis
+
+Matrix analysis shows lower satisfaction levels correlate with higher attrition.
+
+📌 Employee engagement programs may reduce churn.
 
 ---
 
 ## 💡 Key Business Insights
 
-1. Consumer segment drives majority revenue.
-2. West region contributes the highest sales.
-3. Office Supplies is the top-performing category.
-4. Standard shipping mode dominates operations.
-5. Strong Q4 seasonal growth trend.
+1. Attrition Rate is 16.1% – moderate but improvable.
+2. Early-career employees (26–35) are most vulnerable.
+3. Low salary slab employees drive majority of exits.
+4. Technical and Sales roles face higher churn.
+5. Employee satisfaction plays a major role in retention.
 
 ---
 
@@ -138,6 +125,6 @@ State-level map visualization highlights:
 
 * Power BI Desktop
 * DAX Measures
-* Data Modeling
-* Interactive Filters & Slicers
-* Geographic Map Visualization
+* Calculated Columns
+* Interactive slicers & department filters
+* Matrix & trend visualizations
